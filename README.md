@@ -119,6 +119,6 @@ VITE_APP_ENV=development
 
 Ce projet est sous licence MIT - voir le fichier LICENSE pour plus de détails.
 
-```<div align="center">
+<div align="center">
   <p>Développé avec ❤️ par Mouad Hallaffou</p>
 </div>
