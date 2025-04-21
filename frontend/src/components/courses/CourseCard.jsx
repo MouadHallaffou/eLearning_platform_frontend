@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { getCourse } from "../../services/api"; 
 
 const CourseCard = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
   const [course, setCourse] = useState(null);
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState("description");
@@ -393,38 +392,6 @@ const CourseCard = () => {
               {new Date(course.updated_at).toLocaleDateString()}
             </span>
           </div>
-        </div>
-      </div>
-
-      {/* Actions en bas de page */}
-      <div className="flex justify-between">
-        <button
-          onClick={() => navigate('/courses')}
-          className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-5 py-2 rounded-md transition-colors"
-        >
-          Retour à la liste
-        </button>
-        
-        <div className="flex space-x-3">
-          <Link
-            to={`/courses/edit/${course.id}`}
-            className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md transition-colors"
-          >
-            Modifier
-          </Link>
-          
-          <button
-            onClick={() => {
-              // Code pour supprimer le cours, puis rediriger
-              if (window.confirm("Êtes-vous sûr de vouloir supprimer ce cours ?")) {
-                // handleDelete(course.id);
-                navigate('/courses');
-              }
-            }}
-            className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md transition-colors"
-          >
-            Supprimer
-          </button>
         </div>
       </div>
     </div>

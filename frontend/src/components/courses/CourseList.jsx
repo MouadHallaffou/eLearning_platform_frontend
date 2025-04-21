@@ -12,6 +12,8 @@ const CourseList = () => {
     const fetchCourses = async () => {
       try {
         const response = await course.getCourses();
+        console.log(response.data.data);
+        
         setCourses(response.data.data);
       } catch (error) {
         setError(error.message || "Erreur lors du chargement des cours");
@@ -191,7 +193,7 @@ const CourseList = () => {
                 {/* Boutons d'action */}
                 <div className="flex justify-end space-x-2 pt-3 border-t border-gray-100">
                   <Link
-                    to={`/courses/${course.id}`}
+                    to={`/courses/${courseItem.id}`}
                     className="text-purple-600 hover:text-purple-800 p-1.5 hover:bg-purple-50 rounded-full transition-colors"
                     title="View details"
                   >
