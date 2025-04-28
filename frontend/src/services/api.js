@@ -28,7 +28,7 @@ api.interceptors.response.use(
     }
 );
 
-// Export des fonctions individuelles
+// Export des fonctions 
 export const getCourse = (id) => api.get(`/course/${id}`);
 export const getCourses = () => api.get("/course");
 export const createCourse = (data) => api.post("/course", data);
