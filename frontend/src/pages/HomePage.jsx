@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { course, category } from "../services/api";  // Assurez-vous d'avoir ces imports
+import { course, category } from "../services/api";
 
 const HomePage = () => {
   const [stats, setStats] = useState({
@@ -15,17 +15,14 @@ const HomePage = () => {
     const fetchStats = async () => {
       try {
         setLoading(true);
-        // Récupération des statistiques - adaptez selon votre API
         const [coursesRes, categoriesRes] = await Promise.all([
           course.getCourses(),
           category.getCategories(),
         ]);
 
-        // Calcul des statistiques
         const totalCourses = coursesRes.data.data.length;
         const totalCategories = categoriesRes.data.data.length;
-        
-        // Exemple de calcul du taux de complétion - à adapter selon vos données
+ 
         const completedCourses = coursesRes.data.data.filter(c => c.completion_rate).length;
         const completionRate = totalCourses > 0 
           ? Math.round((completedCourses / totalCourses) * 100) 
@@ -241,7 +238,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Call to Action */}
+      {/* inscription */}
       <div className="bg-purple-600 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-extrabold text-white mb-4">Prêt à commencer votre parcours d'apprentissage ?</h2>
