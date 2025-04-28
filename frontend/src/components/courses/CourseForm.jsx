@@ -14,7 +14,7 @@ const CourseForm = () => {
   const [categories, setCategories] = useState([]);
   const [tags, setTags] = useState([]);
 
-  // Schéma de validation
+  // validation
   const validationSchema = Yup.object().shape({
     title: Yup.string().required("Le titre est obligatoire"),
     description: Yup.string().required("La description est obligatoire"),
