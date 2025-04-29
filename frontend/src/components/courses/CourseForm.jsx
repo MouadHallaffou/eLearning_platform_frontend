@@ -71,13 +71,11 @@ const CourseForm = () => {
     enableReinitialize: true
   });
 
-  // Fonction pour gérer le changement de fichier
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
       formik.setFieldValue("cover", file);
       
-      // Afficher un aperçu
       const reader = new FileReader();
       reader.onload = (event) => {
         const preview = document.getElementById('cover-preview');
@@ -87,7 +85,6 @@ const CourseForm = () => {
     }
   };
 
-  // Fonction pour gérer les tags
   const handleTagChange = (tagId, isChecked) => {
     const newTags = isChecked
       ? [...formik.values.tag_ids, tagId]
@@ -96,7 +93,6 @@ const CourseForm = () => {
     formik.setFieldValue("tag_ids", newTags);
   };
 
-  // Chargement des données initiales
   useEffect(() => {
     const fetchInitialData = async () => {
       try {
@@ -112,7 +108,6 @@ const CourseForm = () => {
           const courseResponse = await course.getCourse(id);
           const courseData = courseResponse.data.data;
           
-          // Fonction pour normaliser les tags
           const normalizeTags = (tags) => {
             if (!tags) return [];
             if (Array.isArray(tags)) return tags;

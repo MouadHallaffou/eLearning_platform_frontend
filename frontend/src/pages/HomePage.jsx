@@ -146,7 +146,7 @@ const HomePage = () => {
                   {loading ? (
                     <div className="h-8 w-16 bg-gray-200 rounded animate-pulse mt-1"></div>
                   ) : (
-                    <p className="mt-1 text-3xl font-semibold text-gray-900">{stats.totalStudents}</p>
+                    <p className="mt-1 text-3xl font-semibold text-gray-900">{0}</p>
                   )}
                 </div>
                 <div className="h-12 w-12 bg-purple-100 rounded-full flex items-center justify-center">
