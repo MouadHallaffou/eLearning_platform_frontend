@@ -182,7 +182,7 @@ const CategoryList = () => {
         </div>
       )}
       
-      {/* Indicateur de nombre de catégories */}
+      {/* nombre de catégories */}
       {categories.length > 0 && (
         <div className="mt-4 text-sm text-gray-500">
           {categories.length} catégorie{categories.length > 1 ? 's' : ''} au total
