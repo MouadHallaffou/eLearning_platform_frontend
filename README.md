@@ -92,20 +92,28 @@ VITE_API_BASE_URL=http://localhost:8000/api
 VITE_APP_NAME=plateforme_mentorat
 VITE_APP_ENV=development
 ```
+> **Note**  
+> `VITE_APP_NAME` définit le nom affiché de l'application dans l'interface utilisateur et peut être utilisé pour la personnalisation du branding, (ex: "MentoratPro", "eLearningAcademy", etc.)
 
 ## 🌐 Endpoints API
 
 | Fonctionnalité | Méthode | Endpoint |
 |----------------|---------|----------|
-| Liste des cours | GET | `/api/V1/courses` |
-| Détail d'un cours | GET | `/api/V1/courses/{id}` |
-| Créer un cours | POST | `/api/V1/courses` |
-| Modifier un cours | PUT | `/api/V1/courses/{id}` |
-| Supprimer un cours | DELETE | `/api/V1/courses/{id}` |
-| Liste des catégories | GET | `/api/V1/categories` |
-| Détail catégorie | GET | `/api/V1/categories/{id}` |
-| Liste des tags | GET | `/api/V1/tags` |
-| Statistiques cours | GET | `/api/V1/stats/courses` |
+| Liste des cours | GET | `/api/courses` |
+| Détail d'un cours | GET | `/api/courses/{id}` |
+| Créer un cours | POST | `/api/courses` |
+| Modifier un cours | PUT | `/api/courses/{id}` |
+| Supprimer un cours | DELETE | `/api/courses/{id}` |
+| Liste des catégories | GET | `/api/category` |
+| Détail catégorie | GET | `/api/category/{id}` |
+| Créer une catégorie | POST | `/api/category` |
+| Modifier une catégorie | PUT | `/api/category/{id}` |
+| Supprimer une catégorie | DELETE | `/api/category/{id}` |
+| Liste des tags | GET | `/api/tag` |
+| Détail d'un tag | GET | `/api/tag/{id}` |
+| Créer un tag | POST | `/api/tag` |
+| Modifier un tag | PUT | `/api/tag/{id}` |
+| Supprimer un tag | DELETE | `/api/tag/{id}` |
 
 ## 🤝 Contribuer
 
