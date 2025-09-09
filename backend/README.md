@@ -58,36 +58,34 @@ Une entreprise souhaite développer une plateforme en ligne permettant aux utili
 
 ### Technologies
 - **Framework** : Laravel 11
-- **Base de données** : MySQL ou PostgreSQL
-- **Authentification** : Laravel Sanctum
+- **Base de données** : MySQL
+- **Authentification** : JWT
 - **Gestion des dépendances** : Composer
 - **Architecture** : Service Repository Pattern
 - **Tests** : Pest pour les tests unitaires et fonctionnels
-- **Documentation** : L5-Swagger
+- **Documentation** : L5-Swagger or Postman
 
 ### Structure des Endpoints API
+#### Courses
+- `GET /api/course` : Récupération de tous les cours (avec pagination)
+- `GET /api/course/{id}` : Récupération des détails d'un cours spécifique
+- `POST /api/course` : Création d'un nouveau cours
+- `PUT /api/course/{id}` : Mise à jour d'un cours existant
+- `DELETE /api/course/{id}` : Suppression d'un cours
 
-#### Cours
-- `GET /api/v1/courses` : Récupération de tous les cours (avec pagination)
-- `GET /api/v1/courses/{id}` : Récupération des détails d'un cours spécifique
-- `POST /api/v1/courses` : Création d'un nouveau cours
-- `PUT /api/v1/courses/{id}` : Mise à jour d'un cours existant
-- `DELETE /api/v1/courses/{id}` : Suppression d'un cours
-
-
-#### Catégories
-- `GET /api/v1/categories` : Récupération de toutes les catégories
-- `GET /api/v1/categories/{id}` : Récupération des détails d'une catégorie
-- `POST /api/v1/categories` : Création d'une nouvelle catégorie
-- `PUT /api/v1/categories/{id}` : Mise à jour d'une catégorie
-- `DELETE /api/v1/categories/{id}` : Suppression d'une catégorie
+#### Categories
+- `GET /api/category` : Récupération de toutes les catégories
+- `GET /api/category/{id}` : Récupération des détails d'une catégorie
+- `POST /api/category` : Création d'une nouvelle catégorie
+- `PUT /api/category/{id}` : Mise à jour d'une catégorie
+- `DELETE /api/category/{id}` : Suppression d'une catégorie
 
 #### Tags
-- `GET /api/v1/tags` : Récupération de tous les tags
-- `GET /api/v1/tags/{id}` : Récupération des détails d'un tag
-- `POST /api/v1/tags` : Création d'un nouveau tag
-- `PUT /api/v1/tags/{id}` : Mise à jour d'un tag
-- `DELETE /api/v1/tags/{id}` : Suppression d'un tag
+- `GET /api/tag` : Récupération de tous les tags
+- `GET /api/tag/{id}` : Récupération des détails d'un tag
+- `POST /api/tag` : Création d'un nouveau tag
+- `PUT /api/tag/{id}` : Mise à jour d'un tag
+- `DELETE /api/tag/{id}` : Suppression d'un tag
 
 #### Statistiques
 - `GET /api/v1/stats/courses` : Statistiques globales sur les cours
@@ -107,8 +105,8 @@ Une entreprise souhaite développer une plateforme en ligne permettant aux utili
 ### Procédure d'Installation
 1. **Clonage du dépôt**
    ```bash
-   git clone https://github.com/vMouadHallaffou/plateforme_mentorat.git
-   cd plateforme_mentorat 
+   git clone https://github.com/MouadHallaffou/eLearning_plaftorm_frontend.git
+   cd eLearning_plaftorm_frontend/backend 
    ```
 2. **Installation des dépendances**
    ```bash
