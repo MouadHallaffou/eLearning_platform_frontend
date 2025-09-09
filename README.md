@@ -70,8 +70,8 @@ src/
 
 1. **Cloner le dépôt**
 ```bash
-git clone https://github.com/MouadHallaffou/plateforme_mentorat.git
-cd plateforme_mentorat/frontend
+git clone https://github.com/MouadHallaffou/eLearning_platform_frontend.git
+cd eLearning_platform_frontend/frontend
 ```
 
 2. **Installer les dépendances**
